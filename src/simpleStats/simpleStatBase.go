@@ -22,3 +22,7 @@ func S_方差(值 []float64) (返回值 float64) {
 	}
 	return 返回值 / float64(len(值)-1)
 }
+
+func S_标准偏差(值 []float64) (返回值 float64) {
+	return math.Pow(S_方差(值), 0.5)
+}
