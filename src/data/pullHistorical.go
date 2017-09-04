@@ -1,5 +1,7 @@
 package data
 
-const googleURL = "https://www.google.com/finance/historical?q=GOOG&startdate=2017-7-01&enddate=2017-7-31"
+const google网址 = "https://www.google.com/finance/historical?q=%s&startdate=%s&enddate=%s"
 
-// func Google()
+func Google数据(股票代号 String, 开始日期 String, 结束日期 String) {
+	网址 := fmt.Sprintf(googleURL, 股票代号， 开始日期， 结束日期)
+}
