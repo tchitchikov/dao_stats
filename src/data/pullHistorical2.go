@@ -3,6 +3,7 @@ package data
 import (
 	"encoding/csv"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -26,11 +27,11 @@ func GoogleData() {
 	defer out.Body.Close()
 
 	w := csv.NewReader(out.Body)
-	// records, err := w.ReadAll()
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// fmt.Println(records)
-	record, _ := w.Read()
-	googVal := GoogleDataStruct{record[0], atoi(record[1]), record[2], record[3], record[4], record[5]}
+	records, err := w.ReadAll()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(records)
+	// record, _ := w.Read()
+	// googVal := GoogleDataStruct{record[0], atoi(record[1]), record[2], record[3], record[4], record[5]}
 }

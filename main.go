@@ -1,6 +1,7 @@
 package main
 
 import (
+	"data"
 	"fmt"
 	"simpleStats"
 
@@ -13,4 +14,5 @@ func main() {
 	fmt.Println(simpleStats.S_方差(价值表))
 	fmt.Println(simpleStats.S_标准偏差(价值表))
 	数据.Google数据("GOOG", "2017-01-01", "2017-01-31")
+	data.GoogleData()
 }
